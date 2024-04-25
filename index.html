@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vuetify@3.5.17/dist/vuetify.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@3.5.17/dist/vuetify.min.js"></script>
+
+    <title>My first Vue app</title>
+    
+    <html>
+
+    <head>
+        <title>My first Vue app</title>
+        <script src="https://unpkg.com/vue@2"></script>
+    </head>
+
+<body>
+    <h1>Submit con VUE JS</h1>
+
+    <div id="app10">
+        {{ mensaje }}
+        <form action="paginaProceso.php" v-on:submit="enviar" method="POST">
+            Nombre: <input type="text" name="nombre" placeholder="Ingrese Nombre" v-model="nombre">
+            Password: <input type="password" name="password" placeholder="Ingrese Password" v-model="password">
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <script>
+
+        var app = new Vue({
+            el: "#app10",
+            data: {
+                nombre: "",
+                password: "",
+                mensaje: ""
+            },
+            methods: {
+                enviar: function(event) {
+                    if (this.nombre != "" && this.password != "") {
+                        this.mensaje = "Ok"
+                    }else {
+                        this.mensaje = "Complete los datos"
+                        event.preventDefault()
+                    }
+                }
+            }
+        })
+    </script>
+</body>
