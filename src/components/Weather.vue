@@ -11,7 +11,7 @@ onMounted(() => {
 </script>
 
 <template>
-{{ weatherStore.temperatura }}
+<h3>La temperatura actual es: {{ weatherStore.temperatura }}</h3>
 </template>
 
 <style scoped>
