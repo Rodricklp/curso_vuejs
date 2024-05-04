@@ -1,8 +1,10 @@
 <script setup>
+import Header from "@/components/Header.vue";
 import SideBar from "@/components/SideBar.vue";
 </script>
 
 <template>
+    <Header></Header>
     <div class="container">
         <SideBar></SideBar>
         <div class="content">
